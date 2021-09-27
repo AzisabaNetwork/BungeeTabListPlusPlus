@@ -77,26 +77,26 @@ else
   echo "  Patches applied cleanly to minecraft-data-api"
 fi
 # --- BungeeTabListPlus
-cd .. || exit 1
-echo "  Applying patches to BungeeTabListPlus..."
-$git am --abort >/dev/null 2>&1
-if [[ $windows == "true" ]]; then
-  echo "  Using workaround for Windows ARG_MAX constraint"
-  find "$basedir/BungeeTabListPlus-Patches/"*.patch -print0 | xargs -0 $apply
-else
-  $apply "$basedir/BungeeTabListPlus-Patches/"*.patch
-fi
-if [ "$?" != "0" ]; then
-  echo "  Something did not apply cleanly to BungeeTabListPlus."
-  echo "  Please review above details and finish the apply then"
-  echo "  save the changes with rebuildPatches.sh"
-  #if [[ $windows == "true" ]]; then
-  #  echo ""
-  #  echo "  Because you're on Windows you'll need to finish the AM,"
-  #  echo "  rebuild all patches, and then re-run the patch apply again."
-  #  echo "  Consider using the scripts with Windows Subsystem for Linux."
-  #fi
-  exit 1
-else
-  echo "  Patches applied cleanly to BungeeTabListPlus"
-fi
+#cd .. || exit 1
+#echo "  Applying patches to BungeeTabListPlus..."
+#$git am --abort >/dev/null 2>&1
+#if [[ $windows == "true" ]]; then
+#  echo "  Using workaround for Windows ARG_MAX constraint"
+#  find "$basedir/BungeeTabListPlus-Patches/"*.patch -print0 | xargs -0 $apply
+#else
+#  $apply "$basedir/BungeeTabListPlus-Patches/"*.patch
+#fi
+#if [ "$?" != "0" ]; then
+#  echo "  Something did not apply cleanly to BungeeTabListPlus."
+#  echo "  Please review above details and finish the apply then"
+#  echo "  save the changes with rebuildPatches.sh"
+#  #if [[ $windows == "true" ]]; then
+#  #  echo ""
+#  #  echo "  Because you're on Windows you'll need to finish the AM,"
+#  #  echo "  rebuild all patches, and then re-run the patch apply again."
+#  #  echo "  Consider using the scripts with Windows Subsystem for Linux."
+#  #fi
+#  exit 1
+#else
+#  echo "  Patches applied cleanly to BungeeTabListPlus"
+#fi
