@@ -1,0 +1,30 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: acrylic-style <me@acrylicstyle.xyz>
+Date: Tue, 28 Sep 2021 01:11:33 +0900
+Subject: [PATCH] Update Multiverse-Core and add maven repo
+
+
+diff --git a/bukkit/multiverse/build.gradle b/bukkit/multiverse/build.gradle
+index d94b22cdc88234cd1e18e1cbfa90a544024200ed..6ee76e0082787b312a01f21d5aa427a764d44b99 100644
+--- a/bukkit/multiverse/build.gradle
++++ b/bukkit/multiverse/build.gradle
+@@ -16,13 +16,18 @@
+  */
+ 
+ repositories {
++    // BTLPP start
++    maven {
++        url "https://repo2.acrylicstyle.xyz/"
++    }
++    // BTLPP end
+     maven {
+         url "https://repo.onarandombox.com/content/groups/public/"
+     }
+ }
+ 
+ dependencies {
+-    compileOnly (group: "com.onarandombox.multiversecore", name: "Multiverse-Core", version: "2.5") {
++    compileOnly (group: "com.onarandombox.multiversecore", name: "Multiverse-Core", version: "4.3.2-SNAPSHOT") { // BTLPP - update multiverse-core version
+         exclude group: "net.milkbowl.vault", module: "VaultAPI"
+         exclude group: "org.mcstats.bukkit", module: "metrics"
+         exclude group: "net.md-5", module: "bungeecord-chat"

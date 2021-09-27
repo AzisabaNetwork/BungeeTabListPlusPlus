@@ -1,0 +1,6 @@
+.idea/
+*.iml
+!/BungeeTabListPlusPlus.iml
+target/
+/BungeeTabListPlus/
+/work/
